@@ -1,0 +1,330 @@
+/* ---------------------------------
+1. GENERALE
+--------------------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+html{
+    /*16px par defaut, maintenant 10px*/
+    /*1rem = 10px*/
+    font-size: 62.5%;
+    /*le scroll devient fluide*/
+    scroll-behavior: smooth;
+}
+
+.red{
+    color: #f50a0a;
+}
+
+.blue{
+    color: #510af5;
+}
+
+.turquoise{
+    color: #0ac6f5;
+}
+
+.scroll-button{
+    position: fixed;
+    bottom: 5rem;
+    right: 7rem;
+    font-size: 1.8rem;
+    background-color: #ff4444;
+    color: #fafafa;
+    padding: 1rem 1.5rem;
+    border-radius: 30rem;
+    transition: all 1s;
+}
+.scroll-button:hover{
+    transform: translateY(3rem);
+    background-color:#510af5;
+}
+
+/* ---------------------------------
+2. HEADER
+--------------------------------- */
+
+.header{
+    height: auto;
+    padding: 2rem 7rem;
+    background-color: #fafafa;
+}
+
+/************NAVIGATOR*************/
+
+.header input{
+    display: none;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text{
+    text-decoration: none;
+    color: #2e2e2e;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Open sans", sans-serif;
+}
+
+.navigation-list{
+    display: flex;
+    list-style: none;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.logo-div{
+    display: flex;
+    align-items: center;
+}
+
+.logo-image{
+    width: 8rem;
+    /*1er paramètre sur quel proprieter*/
+    /*2eme paramètre combien de seconde*/
+    transition: all 1s;
+}
+.logo-image:hover{
+    /*Rotation du logo*/
+    transform: rotateZ(360deg);
+}
+
+.navigation-liens{
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #2e2e2e;
+    padding: 1rem 0;
+    /*1er paramètre sur quel proprieter*/
+    /*2eme paramètre combien de seconde*/
+    transition: all 1s;
+}
+.navigation-liens:hover{
+    color: #00c851;
+    border-bottom: 2px #00c851 solid;
+}
+
+/****************************************/
+
+/****************MAIN-IMAGE**************/
+
+.content{
+    display: flex;
+    margin-top:9rem;
+}
+
+.content-image{
+    width: 55rem;
+}
+
+/****************************************/
+
+/*************MAIN-IMAGE-TEXT************/
+
+.text-content{
+    padding: 5rem;
+}
+
+.text-content h2{
+    font-size: 4rem;
+    color: #2e2e2e;
+}
+
+.text-content p{
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    color: #2e2e2e;
+}
+
+.button{
+    display: inline-block;
+    margin-top: 5rem;
+    text-decoration: none;
+    color: #fafafa;
+    background-color: #00c851;
+    font-size: 2rem;
+    padding: 2rem 4rem;
+    border-radius: 20rem;
+    transition: 0.5s all;
+}
+
+.button:hover{
+    /*animation boutton*/
+    transform: translateY(3rem);
+    background-color:#510af5;
+}
+
+/****************************************/
+
+/* ---------------------------------
+3. SECTION 1 (AVANTAGE)
+--------------------------------- */
+
+.section-avantage{
+    padding: 4rem 15rem;
+}
+
+.titre-section{
+    font-size: 3rem;
+    color: #2e2e2e;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+.avantage-conteneur{
+    display: flex;
+    margin-top: 5rem;
+    justify-content: space-between;
+}
+
+.avantage{
+    width: 28%;
+    padding: 2rem 4rem;
+    text-align:center;
+    box-shadow: 11px 9px 19px 5px rgba(46,46,46,0.76);
+    /* -webkit-box-shadow: 11px 9px 19px -12px rgba(46,46,46,0.76);
+    -moz-box-shadow: 11px 9px 19px -12px rgba(46,46,46,0.76); */
+    transition: all 1s;
+}
+.avantage:hover{
+    box-shadow: 11px 9px 3rem -10px rgba(46,46,46,0.76);
+}
+
+.avantage h3{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+}
+
+.avantage p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+/* ---------------------------------
+4. SECTION 2 (FONCTIONNALITER)
+--------------------------------- */
+
+.fonctionnalités{
+    margin-top:2rem;
+}
+
+.fonctionnalites-section{
+    background-color: #fafafa;
+    padding: 3rem 12rem;
+}
+
+.fonctionnalites-conteneur{
+    display: flex;
+    margin-top: 5rem;
+}
+
+.fonctionnalites-conteneur img{
+    width: 50rem;
+}
+
+.fonctionnalites-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.fonctionnalite{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fafafa;
+    box-shadow: 11px 9px 19px 5px rgba(46,46,46,0.76);
+    margin-top: 3rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.fonctionnalite h3{
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #2e2e2e;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.fonctionnalite div{
+    margin-left: 2rem;
+}
+
+.fonctionnalite p{
+    font-size: 1.4rem;
+    color: #2e2e2e;
+    margin-top: 1rem;
+}
+
+/* ---------------------------------
+5. SECTION 3 (NEWSLETTER)
+--------------------------------- */
+
+.newsletter-section{
+    padding: 4rem 15rem;
+    text-align: center;
+}
+
+.newsletter-title{
+    color: #2e2e2e;
+    font-family: "Roboto thin", sans-serif;
+    letter-spacing: 1rem;
+    font-style: italic;
+    font-size: 3rem;
+}
+
+.newsletter-content input{
+    margin-top: 4rem;
+    padding: 1rem 30rem 1rem 1rem;
+    border: none;
+    outline: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #00c851;
+    transition: all 1s;
+}
+.newsletter-content input:hover{
+    border-bottom: 2px solid #000201;
+}
+
+.newsletter-button{
+    color: #fafafa;
+    background-color: #00c851;
+    padding: 1.5rem 4rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1.6rem;
+    margin-left: 2rem;
+}
+
+/* ---------------------------------
+6. FOOTER
+--------------------------------- */
+
+footer{
+    background-color: #00c851;
+    padding: 2rem 6rem;
+    text-align: center;
+}
+
+footer p{
+    color: white;
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+}
+
+/*************************************/
